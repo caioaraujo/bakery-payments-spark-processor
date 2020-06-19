@@ -20,3 +20,4 @@ Make a local copy of `local.env` file as `.env`. Once this project uses python-d
 
 ## Running 
 
+Just run `processors.py` file as a regular python file.
