@@ -1,9 +1,6 @@
-import os
-
 from pyspark.sql import SparkSession
 
-spark_home = os.environ["SPARK_HOME"]
-payments = spark_home + "/data/payments/payments.csv"
+payments = "../data/payments/payments.csv"
 spark = SparkSession.builder.appName("BakeryPayments").getOrCreate()
 payment_data = spark.read.text(payments).cache()
 

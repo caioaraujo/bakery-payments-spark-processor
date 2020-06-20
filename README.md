@@ -4,7 +4,7 @@ A data processing study based on Apache Spark 3.
 ## Requirements
 
 - Python 3.8+
-- Apache Spark 3.0+ (https://spark.apache.org/downloads.html)
+- Java with envvar `JAVA_HOME` setted
 
 Optional:
 
