@@ -1,3 +1,5 @@
+import sys
+
 from pyspark.sql import SparkSession
 
 
@@ -6,8 +8,10 @@ class PaidPaymentsProcessor:
     def __init__(self, app_name="BakeryPayments"):
         self.app_name = app_name
 
-    def process(self):
-        payments = "./data/payments/payments.csv"
+    def process(self, payments="./data/payments/payments.csv"):
+        if len(sys.argv) > 1:
+            payments = sys.argv[1]
+
         spark = SparkSession.builder.appName(self.app_name).getOrCreate()
         payment_data = spark.read.text(payments).cache()
 
