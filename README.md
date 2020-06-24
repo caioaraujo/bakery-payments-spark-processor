@@ -27,3 +27,10 @@ Just run `processors.py` file as a regular python file:
 or with GNU make:
 
 `make run`
+
+## Tests
+
+For tests running, you should install all development dependencies.<br>
+Run all project tests with:
+
+`pytest`
